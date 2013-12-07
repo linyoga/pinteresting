@@ -1,4 +1,10 @@
 <div class="jumbotron center">
 	<h1>Travel In Taiwan!</h1>
-	<p><h1><%= link_to "Learn More ", "#", class: "btn btn-primary btn-lg" %><h1></p>
+	<% if user_signed_in?	%>
+		#do something	
+	<%else %>
+		<p><%= link_to "Sign Up ", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+		 <%= link_to "Login in ", new_user_session_path, class: "btn btn-primary btn-lg" %>
+		</p>
+	<%end %>
 </div>
